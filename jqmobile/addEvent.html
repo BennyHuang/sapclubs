@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="http://cdn.rawgit.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="http://cdn.rawgit.com/jquery/jquery-ui/1.10.4/ui/jquery.ui.datepicker.js"></script>
+    <script id="mobile-datepicker" src="http://cdn.rawgit.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.js"></script>
+    <style type="text/css">
+    	.ui-field-contain label.field_name {
+    		margin: 0.5em 0;
+    	}
+    	#ui-datepicker-div {
+    		z-index: 100;
+    	}
+    </style>
+</head>
+<body>
+<div data-role="page">
+	<div data-role="header">
+		<h1>Adding New Activity</h1>
+	</div>
+	<div role="main" class="ui-content">
+		<div class="ui-field-contain">
+			<label class="field_name" for="title">Title:</label>
+			<input type="text" name="title" id="title">
+			<labe class="field_name" l for="desc">Description:</label>
+			<textarea cols="30" rows="10" id="desc" name="desc"></textarea>
+			<labe class="field_name" l for="logo">Logo:</label>
+			<input type="file" name="logo" id="logo">
+			<label class="field_name"  for="club">Club:</label>
+			<select name="club" id="club">
+				<option>Choose...</option>
+				<option>Yoga</option>
+				<option>Belly Dance</option>
+				<option>Jazz</option>
+				<option>Single Club</option>
+				<option>妈妈群</option>
+			</select>
+			<labe class="field_name" l for="start">Start Date:</label>
+			<input type="date" data-role="date" name="start">
+			<label class="field_name"  for="end">End Date:</label>
+			<input type="date" data-role="date" name="end">
+			<label class="field_name"  for="occuring">Occuring:</label>
+			<fieldset data-role="controlgroup" id="occuring">
+				<input type="checkbox" name="sun" id="sun">
+				<label for="sun">Sun</label>
+				<input type="checkbox" name="mon" id="mon">
+				<label for="mon">Mon</label>
+				<input type="checkbox" name="tue" id="tue">
+				<label for="tue">Tue</label>
+				<input type="checkbox" name="wed" id="wed">
+				<label for="wed">Wed</label>
+				<input type="checkbox" name="thu" id="thu">
+				<label for="thu">Thu</label>
+				<input type="checkbox" name="fri" id="fri">
+				<label for="fri">Fri</label>
+				<input type="checkbox" name="sat" id="sat">
+				<label for="sat">Sat</label>
+			</fieldset>
+			<label class="field_name"  for="memberOnly">Member Only:</label>
+			<input type="checkbox" data-role="flipswitch" name="memberOnly" id="memberOnly" data-on-text="YES" data-off-text="NO" data-wrapper-class="custom-label-flipswitch">
+		</div>
+	</div>
+	<div data-role="footer">
+		<a href="#" role="button" class="ui-btn ui-corner-all ui-btn-inline" style="float:right">Ok</a>
+		<a href="#" role="button" class="ui-btn ui-corner-all ui-btn-inline" style="float:right">Cancel</a>
+	</div>
+</div>
+
+
+</body>
+</html>
+
