@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+	<link rel="stylesheet" href="http://davidstutz.github.io/bootstrap-multiselect/dist/css/bootstrap-multiselect.css" />
+	<link rel="stylesheet" href="http://www.bootstrap-switch.org/dist/css/bootstrap3/bootstrap-switch.css" />
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="http://davidstutz.github.io/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
+	<script src="http://www.bootstrap-switch.org/dist/js/bootstrap-switch.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#start').datepicker({});
+			$('#end').datepicker({});
+			$('#occuring').multiselect({
+			 	buttonWidth: '100%',
+			 	onChange: function(option, checked, select) {
+
+			 	}
+			});
+			$("#memberOnly").bootstrapSwitch();
+        });
+    </script>
+    <style type="text/css">
+    	.multiselect-container {
+    		width: 100%;
+    	}
+    </style>
+</head>
+<body>
+<div class="container">
+	<h4 class="text-center bg-info" style="padding:0.5em">Adding New Activity</h4>
+	<form>
+  		<div class="form-group">
+    		<label for="title">Title:</label>
+    		<input type="text" class="form-control" id="title">
+  		</div>
+  		<div class="form-group">
+    		<label for="desc">Description:</label>
+    		<textarea class="form-control" cols="30" rows="5" id="desc" name="desc"></textarea>
+  		</div>
+  		<div class="form-group">
+    		<label for="logo">Logo:</label>
+    		<input class="form-control" type="file" id="logo">
+  		</div>
+  		<div class="form-group">
+    		<label for="club">Club:</label>
+    		<select class="form-control" id="club">
+				<option>Choose...</option>
+				<option>Yoga</option>
+				<option>Belly Dance</option>
+				<option>Jazz</option>
+				<option>Single Club</option>
+				<option>妈妈群</option>
+			</select>
+  		</div>
+		<div class="form-group">
+			<label for="start">Start Date:</label>
+			<div class="input-group date" id="start">
+  				<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+  			</div>
+		</div>
+		<div class="form-group date">
+			<label for="end">End Date:</label>
+			<div class="input-group date" id="end">
+  				<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+  			</div>
+		</div>
+		<div class="form-group">
+			<label for="occuring">Occuring:</label>
+			<select id="occuring" multiple="multiple" class="form-control">
+    			<option value="sun">SUN</option>
+    			<option value="mon">MON</option>
+    			<option value="tue">TUE</option>
+    			<option value="wed">WED</option>
+    			<option value="thu">THU</option>
+    			<option value="fri">FRI</option>
+    			<option value="sat">SAT</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="memberOnly" style="display:block">Member Only:</label>
+			<input type="checkbox" class="form-control" id="memberOnly" data-size="mini" checked>
+  		</div>
+	</form>
+	<div class="pull-right" style="margin: 1em 0">
+		<a class="btn btn-default" href="#" role="button">Cancel</a>
+		<a class="btn btn-primary" href="#" role="button">OK</a>
+	</div>
+</div>
+</body>
+</html>
+
