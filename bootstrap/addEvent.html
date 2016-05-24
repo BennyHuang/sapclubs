@@ -14,8 +14,8 @@
 	<script src="http://www.bootstrap-switch.org/dist/js/bootstrap-switch.js"></script>
 	<script type="text/javascript">
 		$(function () {
-			$('#start').datepicker({});
-			$('#end').datepicker({});
+			// $('#start').datepicker({});
+			// $('#end').datepicker({});
 			$('#occuring').multiselect({
 			 	buttonWidth: '100%',
 			 	onChange: function(option, checked, select) {
@@ -58,15 +58,15 @@
 			</select>
   		</div>
 		<div class="form-group">
-			<label for="start">Start Date:</label>
-			<div class="input-group date" id="start">
-  				<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+			<label for="start">Start Time:</label>
+			<div class="input-group" id="start">
+  				<input type="time" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
   			</div>
 		</div>
-		<div class="form-group date">
-			<label for="end">End Date:</label>
+		<div class="form-group">
+			<label for="end">End Time:</label>
 			<div class="input-group date" id="end">
-  				<input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+  				<input type="time" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
   			</div>
 		</div>
 		<div class="form-group">
