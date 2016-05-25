@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        /*
+ * Specific styles of signin component
+ */
+/*
+ * General styles
+ */
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #003D78;
+}
+
+.card-container.card {
+    width: 350px;
+    padding: 40px 40px;
+}
+
+
+.card {
+    background-color: #fff;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+    width: 6em;
+    height: 6em;
+    margin: 0 auto 3em;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.profile-name-card {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.7em 0 0;
+    min-height: 1em;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputEmployeeID{
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input,
+.form-signin select {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.7em;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: #0685FF;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #0066CC;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px #0066CC;
+}
+.btn-group {
+    text-align: center;
+    width: 100%;
+}
+.btn-group .btn {
+    width: 50%;
+}
+ </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card card-container">
+            <img id="profile-img" class="profile-img-card" src="./images/webwxgeticon.jpg" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <input type="text" id="inputEmployeeID" class="form-control" placeholder="Employee ID" autofocus>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email">
+                <input type="text" id="wxUserId" class="form-control" placeholder="Employee ID" disabled value="微信邮差">
+                <input type="email" id="wxUserLocal" class="form-control" placeholder="Email" disabled value="上海 浦东新区">
+                <select class="form-control">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <div class="btn-group">
+                    <button class="btn btn-lg btn-primary" type="submit">Save</button>
+                    <button class="btn btn-lg btn-default">Cancel</button>                   
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
