@@ -21,6 +21,9 @@
                 $('#comment-form').toggleClass('hidden');
                 //post comment request
             });
+            $('#delete-btn').click(function() {
+                
+            });
         });
     </script>
     <style type="text/css">
@@ -86,6 +89,9 @@
         textarea {
             margin: 1em 0;
         }
+        #delete-btn {
+            color: white
+        }
     </style>
 </head>
 <body>
@@ -100,6 +106,7 @@
                 1111111 descriptions Club 1111111 descriptions Club 1111111 descriptions Club 1111111 descriptions Club 1111111 descriptions</p> 
                 <div class="owner">
                     <span><img src="./images/webwxgeticon.jpg"><span class="name">user name</span></span>
+                    <a href="#" id="delete-btn" class="btn btn-lg glyphicon glyphicon-trash pull-right"></a>
                 </div>
             </div>
             <a href="#" class="btn btn-lg btn-outline join-btn">Join!</a>

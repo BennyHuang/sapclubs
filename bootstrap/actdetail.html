@@ -24,6 +24,9 @@
             $('#new-session-btn').click(function() {
                 //post session request
             });
+            $('#delete-btn').click(function() {
+                
+            });
         });
     </script>
     <style type="text/css">
@@ -96,6 +99,9 @@
         .session img {
             width: 3em;
         }
+        #delete-btn {
+            color: white
+        }
     </style>
 </head>
 <body>
@@ -121,6 +127,7 @@
                         <label>Club:</label>
                         <span>Company Wide</span>
                     </div>
+                    <a href="#" id="delete-btn" class="btn btn-lg glyphicon glyphicon-trash pull-right"></a>
                 </div>
             <a href="#" class="btn btn-lg btn-outline join-btn">Join!</a>
     </header>
