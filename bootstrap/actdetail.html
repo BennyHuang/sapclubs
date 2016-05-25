@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.reply-btn').click(function() {
+                $('#comments-view').toggleClass('hidden');
+                $('#comment-form').toggleClass('hidden');
+            });
+            $('#new-comment-btn').click(function() {
+                $('#comments-view').toggleClass('hidden');
+                $('#comment-form').toggleClass('hidden');
+            });
+            $('#post-btn').click(function() {
+                $('#comments-view').toggleClass('hidden');
+                $('#comment-form').toggleClass('hidden');
+                //post comment request
+            });
+            $('#new-session-btn').click(function() {
+                //post session request
+            });
+            $('#delete-btn').click(function() {
+                
+            });
+        });
+    </script>
+    <style type="text/css">
+        header {
+            background: #6f5499;
+        }
+        header .media {
+            margin: 0 1em
+        }
+        header .media-body {
+            padding: 1em 0;
+        }
+        header img {
+            width: 5em;
+        }
+        header h2 {
+            color: white;
+        }
+        header p {
+            color: #cdbfe3;
+        }
+        .act-details {
+            color: white;
+            text-align: center;
+        }
+        .owner img {
+            width: 2em;
+        }
+        .owner .name {
+            margin-left: 1em;
+            color: #cdbfe3;
+        }
+        .join-btn {
+            border: 1px solid white;
+            color: white;
+            margin: 0 auto 1em;
+            display: block;
+            width: 40%;
+        }
+        .panel-heading {
+            text-align: center;
+        }
+        .member img {
+            max-width: 100%;
+        }
+        #comments-view img {
+            width: 1em;
+        }
+        .member div {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+            font-size: 0.7em;
+        }
+        .comment.reply {
+            margin-left: 2em;
+        }
+        .comment span {
+            font-size: 0.8em;
+            padding: 0 0.5em;
+        }
+        #new-comment-btn, #new-session-btn {
+            margin: 0 auto 1em;
+            width: 40%;
+            display: block;
+        }
+        textarea {
+            margin: 1em 0;
+        }
+        .session img {
+            width: 3em;
+        }
+        #delete-btn {
+            color: white
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="media">
+            <div class="media-left media-middle">
+                <img class="media-object" src="./images/sap.png">
+            </div>
+            <div class="media-body">
+                <h2 class="media-heading">Activity 1111111</h2>
+                <p>Activity 1111111 descriptions Activity 1111111 descriptions Activity 1111111 descriptions Activity 1111111 descriptions Activity 
+                1111111 descriptions Activity 1111111 descriptions Activity 1111111 descriptions Activity 1111111 descriptions Activity 1111111 descriptions</p> 
+                <div class="owner">
+                    <span><img src="./images/webwxgeticon.jpg"><span class="name">user name</span></span>
+                </div>
+            </div>
+                <div class="act-details">
+                    <div>
+                        <label>Time:</label>
+                        <span>18:00 - 20:00 (Every Sun)</span>
+                    </div>
+                    <div>
+                        <label>Club:</label>
+                        <span>Company Wide</span>
+                    </div>
+                    <a href="#" id="delete-btn" class="btn btn-lg glyphicon glyphicon-trash pull-right"></a>
+                </div>
+            <a href="#" class="btn btn-lg btn-outline join-btn">Join!</a>
+    </header>
+    <section>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <div role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Participants</div>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon1.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon2.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon3.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon1.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon2.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon3.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon1.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon2.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon3.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon.jpg">
+                            <div>name</div>
+                        </div>
+                        <div class="col-xs-2 member">
+                            <img src="./images/webwxgeticon1.jpg">
+                            <div>name</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <div class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Sessions</div>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                        <button type="button" class="btn btn-default" id="new-session-btn">
+                            <span class="glyphicon glyphicon-list-alt"></span> New Session
+                        </button>
+                        <ul class="list-group">
+                            <li class="list-group-item session">
+                                <img src="./images/webwxgeticon3.jpg">
+                                <span>name is Host</span>
+                                <span>@ 2016-05-26 15:11:11</span>
+                            </li>
+                            <li class="list-group-item session">
+                                <img src="./images/webwxgeticon2.jpg">
+                                <span>name is Host</span>
+                                <span>@ 2016-05-26 15:11:11</span>
+                            </li>
+                            <li class="list-group-item session">
+                                <img src="./images/webwxgeticon1.jpg">
+                                <span>name is Host</span>
+                                <span>@ 2016-05-26 15:11:11</span>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <div class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Comments</div>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <div id="comments-view">
+                        <button type="button" class="btn btn-default" id="new-comment-btn">
+                            <span class="glyphicon glyphicon-pencil"></span> New Post
+                        </button>
+                        <div class="comment-list">
+                            <div class="comment-item">
+                                <div class="orignial comment">
+                                    <div>
+                                        <img src="./images/webwxgeticon3.jpg">
+                                        <span>name</span>
+                                        <span>@ 2016-05-26 15:11:11</span>
+                                        <span type="button" class="reply-btn glyphicon glyphicon-comment pull-right"></span>
+                                    </div>
+                                    <div class="well well-sm">Hello, everyone!</div>
+                                </div>
+                                <div class="reply comment">
+                                    <div><img src="./images/webwxgeticon2.jpg"><span>name</span><span>@ 2016-05-26 15:11:11</span></div>
+                                    <div class="well well-sm">Hello, everyone!</div>
+                                </div>
+                                <div class="reply comment">
+                                    <div><img src="./images/webwxgeticon1.jpg"><span>name</span><span>@ 2016-05-26 15:11:11</span></div>
+                                    <div class="well well-sm reply">Hello, everyone!</div>  
+                                </div>
+                            </div>
+                            <div class="comment-item">
+                                <div class="orignial comment">
+                                    <div>
+                                        <img src="./images/webwxgeticon3.jpg">
+                                        <span>name</span>
+                                        <span>@ 2016-05-26 15:11:11</span>
+                                        <span type="button" class="reply-btn glyphicon glyphicon-comment pull-right"></span>
+                                    </div>
+                                    <div class="well well-sm">Good morning, everyone!</div>
+                                </div>
+                                <div class="reply comment">
+                                    <div><img src="./images/webwxgeticon3.jpg"><span>name</span><span>@ 2016-05-26 15:11:11</span></div>
+                                    <div class="well well-sm">Hello. HAHAHAHAHAHAHA</div>
+                                </div>
+                            </div>
+                            <div class="comment-item">
+                                <div class="orignial comment">
+                                    <div>
+                                        <img src="./images/webwxgeticon3.jpg">
+                                        <span>name</span>
+                                        <span>@ 2016-05-26 15:11:11</span>
+                                        <span type="button" class="reply-btn glyphicon glyphicon-comment pull-right"></span>
+                                    </div>
+                                    <div class="well well-sm">How are you doing?</div>
+                                </div>
+                                <div class="reply comment">
+                                    <div><img src="./images/webwxgeticon2.jpg"><span>name</span><span>@ 2016-05-26 15:11:11</span></div>
+                                    <div class="well well-sm">Swell!</div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    
+                    <div id="comment-form" class="hidden">
+                        <textarea class="form-control" rows="3"></textarea>
+                        <button id="post-btn" type="submit" class="btn btn-primary pull-right">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+</div>
+</body>
+</html>
+
