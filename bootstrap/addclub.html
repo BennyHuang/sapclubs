@@ -6,6 +6,18 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#logo').on('change', function(event) {
+				var reader = new FileReader();
+				var file = $('#logo')[0].files[0];
+				reader.readAsDataURL(file);
+				reader.addEventListener('load', function () {
+    				$('#imageDataURL').val(reader.result);
+  				});
+			});
+        });
+    </script>
 </head>
 <body>
 <div class="container" style="margin: 1em 0">
@@ -23,8 +35,9 @@
   		</div>
   		<div class="form-group">
     		<label for="logo">Logo:</label>
-    		<input class="form-control" type="file" id="logo">
+    		<input class="form-control" type="file" id="logo" accept="image/*">
   		</div>
+  		<input type="hidden" name="imageDataURL" id="imageDataURL">
 	</form>
 	<div class="pull-right" style="margin: 1em 0">
 		<a class="btn btn-default" href="#" role="button">Cancel</a>
