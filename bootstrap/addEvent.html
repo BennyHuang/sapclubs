@@ -19,10 +19,14 @@
 			$('#occuring').multiselect({
 			 	buttonWidth: '100%',
 			 	onChange: function(option, checked, select) {
-
+			 		var val = $(option).val();
+			 		$('#'+val)[0].value = checked;
 			 	}
 			});
 			$("#memberOnly").bootstrapSwitch();
+			$("#memberOnly").on('switchChange.bootstrapSwitch', function(event, state) {
+				$("#memberOnlyinput")[0].value = state;
+			});
         });
     </script>
     <style type="text/css">
@@ -89,6 +93,14 @@
 			<label for="memberOnly" style="display:block">Member Only:</label>
 			<input type="checkbox" class="form-control" id="memberOnly" data-size="mini" checked>
   		</div>
+ 		<input type="hidden" id="sun" name="sun" value="false">
+		<input type="hidden" id="mon" name="mon" value="false">
+		<input type="hidden" id="tue" name="tue" value="false">
+		<input type="hidden" id="wed" name="wed" value="false">
+		<input type="hidden" id="thu" name="thu" value="false">
+		<input type="hidden" id="fri" name="fri" value="false">
+		<input type="hidden" id="sat" name="sat" value="false">
+		<input type="hidden" id="memberOnlyinput" name="memberOnly" value="true">
 	</form>
 	<div class="pull-right" style="margin: 1em 0">
 		<a class="btn btn-default" href="#" role="button">Cancel</a>
