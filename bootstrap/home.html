@@ -5,25 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#myCarousel").swiperight(function() {
+                $(this).carousel('prev');
+            });
+            $("#myCarousel").swipeleft(function() {
+                $(this).carousel('next');
+            });            
+        });
+    </script>
 </head>
-<body>
+<body style="background:#F0AB00">
     <div style="position:relative">
         <img src="./images/home.jpg" style="width:100%">
-        <div style="position:absolute;z-index:200;left:180px;top:0;font-weight:bold">
-            <h1>We Shape</h1>
-            <p style="padding-left:50px">Focus not only on Health</p>
+        <div style="position:absolute;z-index:200;left:150px;top:0;font-weight:bold">
+            <div style="font-size:2em; margin-top:2em">WE SHAPE</div>
+            <p style="padding-left:30px">Focus not only on Health</p>
+        </div>
+        <div class="input-group" style="margin: 0 2em;position:absolute;bottom:20px;">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-default glyphicon glyphicon-search" type="button"></button>
+            </span>
         </div>
     </div>
 
-    <div class="input-group">
-      <input type="text" class="form-control">
-      <span class="input-group-btn">
-        <button class="btn btn-default glyphicon glyphicon-search" type="button"></button>
-      </span>
-    </div>
 
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin:4em 0">
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
